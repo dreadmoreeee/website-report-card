@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "website-report-card"
+version = "1.0.0"
+description = "One client-friendly website report card (HTML, Markdown, JSON, PDF) built from eight small website checks."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Marvin Palencia" }]
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["website", "audit", "report", "seo", "accessibility", "security", "performance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+]
+
+[project.optional-dependencies]
+pdf = ["playwright>=1.40"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/dreadmoreeee/website-report-card"
+
+[project.scripts]
+website-report-card = "website_report_card.cli:main"
+
+[tool.setuptools]
+packages = ["website_report_card"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

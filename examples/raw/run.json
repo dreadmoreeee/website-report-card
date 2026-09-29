@@ -1,0 +1,160 @@
+{
+  "url": "https://demarkstudio.ca/",
+  "tools": {
+    "security-headers-audit": {
+      "key": "security-headers-audit",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 3.2819999999992433,
+      "command": [
+        "python",
+        "-m",
+        "security_headers_audit",
+        "https://demarkstudio.ca/",
+        "--format",
+        "json",
+        "--delay",
+        "1",
+        "--user-agent",
+        "website-report-card/1.0 (+https://github.com/dreadmoreeee/website-report-card)"
+      ],
+      "stderr_tail": ""
+    },
+    "web-vitals-lite": {
+      "key": "web-vitals-lite",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 8.531000000002678,
+      "command": [
+        "python",
+        "-m",
+        "web_vitals_lite",
+        "https://demarkstudio.ca/",
+        "--profile",
+        "mobile",
+        "--runs",
+        "1",
+        "--format",
+        "json"
+      ],
+      "stderr_tail": "mobile run 1/1: https://demarkstudio.ca/"
+    },
+    "a11y-audit": {
+      "key": "a11y-audit",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 13.718999999997322,
+      "command": [
+        "python",
+        "-m",
+        "a11y_audit",
+        "https://demarkstudio.ca/",
+        "--format",
+        "json",
+        "--quiet",
+        "--user-agent",
+        "website-report-card/1.0 (+https://github.com/dreadmoreeee/website-report-card)"
+      ],
+      "stderr_tail": ""
+    },
+    "consent-tracker-scan": {
+      "key": "consent-tracker-scan",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 4.921999999998661,
+      "command": [
+        "python",
+        "-m",
+        "consent_tracker_scan",
+        "https://demarkstudio.ca/",
+        "--pages",
+        "1",
+        "--quiet",
+        "--json",
+        "<tmp>/consent.json"
+      ],
+      "stderr_tail": ""
+    },
+    "site-seo-crawler": {
+      "key": "site-seo-crawler",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 12.406999999999243,
+      "command": [
+        "python",
+        "-m",
+        "site_seo_crawler",
+        "https://demarkstudio.ca/",
+        "--max-pages",
+        "10",
+        "--format",
+        "json",
+        "--delay",
+        "1",
+        "--out-dir",
+        "<tmp>/seo",
+        "--user-agent",
+        "website-report-card/1.0 (+https://github.com/dreadmoreeee/website-report-card)"
+      ],
+      "stderr_tail": ""
+    },
+    "og-card-check": {
+      "key": "og-card-check",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 3.3910000000032596,
+      "command": [
+        "python",
+        "-m",
+        "og_card_check",
+        "https://demarkstudio.ca/",
+        "--no-preview",
+        "--json",
+        "-",
+        "--delay",
+        "1"
+      ],
+      "stderr_tail": "1 page(s), 0 error(s), 2 warning(s)"
+    },
+    "email-dns-check": {
+      "key": "email-dns-check",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 0.9219999999986612,
+      "command": [
+        "python",
+        "-m",
+        "email_dns_check",
+        "demarkstudio.ca",
+        "--format",
+        "json"
+      ],
+      "stderr_tail": ""
+    },
+    "http-protocol-check": {
+      "key": "http-protocol-check",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 6.936999999998079,
+      "command": [
+        "python",
+        "-m",
+        "http_protocol_check",
+        "https://demarkstudio.ca",
+        "--format",
+        "json",
+        "--fail-on",
+        "never"
+      ],
+      "stderr_tail": ""
+    }
+  }
+}

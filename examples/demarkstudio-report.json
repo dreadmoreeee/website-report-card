@@ -1,0 +1,507 @@
+{
+  "tool": "website-report-card",
+  "version": "1.0.0",
+  "url": "https://demarkstudio.ca/",
+  "domain": "demarkstudio.ca",
+  "generated": "2026-09-29T12:10:41+00:00",
+  "date": "2026-09-29",
+  "prepared_for": "DeMark Studio (self-audit)",
+  "brand": {
+    "name": "DeMark Studio"
+  },
+  "grade": "B",
+  "score": 84,
+  "weights": {
+    "security": 20,
+    "speed": 15,
+    "accessibility": 15,
+    "privacy": 15,
+    "seo": 15,
+    "email": 10,
+    "social": 5,
+    "http": 5
+  },
+  "areas_checked": 8,
+  "areas_total": 8,
+  "excluded": [],
+  "areas": [
+    {
+      "key": "security",
+      "title": "Security",
+      "weight": 20,
+      "tool": "security-headers-audit",
+      "checked": true,
+      "score": 98,
+      "light": "green",
+      "verdict": "Well protected: security settings grade A+ (98/100).",
+      "reason": "",
+      "details": [
+        "HTTPS redirect: 10/10",
+        "TLS: 10/10",
+        "Strict-Transport-Security: 20/20",
+        "Content-Security-Policy: 20/20",
+        "Clickjacking (frame-ancestors / X-Frame-Options): 10/10",
+        "X-Content-Type-Options: 5/5",
+        "Referrer-Policy: 5/5",
+        "Permissions-Policy: 5/5",
+        "COOP / CORP: 3/5",
+        "  LOW: No Cross-Origin-Resource-Policy. Fix: Cross-Origin-Resource-Policy: same-origin",
+        "Cookies: 5/5",
+        "Server / version leakage: 5/5"
+      ],
+      "issues": [
+        {
+          "area": "security",
+          "concern": "security-extras",
+          "severity": "low",
+          "title": "Add the remaining standard security settings",
+          "why": "Each one is a single server setting that closes a small gap.",
+          "who": "your web developer",
+          "technical": "No Cross-Origin-Resource-Policy.",
+          "area_title": "Security"
+        }
+      ]
+    },
+    {
+      "key": "speed",
+      "title": "Speed",
+      "weight": 15,
+      "tool": "web-vitals-lite",
+      "checked": true,
+      "score": 49,
+      "light": "red",
+      "verdict": "Slow on phones: main content in 2.55 s, page busy for 625 ms (targets: 2.5 s and 200 ms).",
+      "reason": "",
+      "details": [
+        "Profile: mobile (throttled CPU and network), 1 run(s), final URL https://demarkstudio.ca/en/",
+        "LCP (largest content shown): 2,548 ms (needs improvement, good <= 2,500 ms)",
+        "TBT (total blocking time): 625 ms (poor, good <= 200 ms)",
+        "CLS (layout shift): 0.000 (good, good <= 0.1)",
+        "FCP (first content): 2,492 ms",
+        "TTFB (server response): 374 ms",
+        "Page weight: 678.2 kB in 29 requests",
+        "Render-blocking resources in <head>: 2",
+        "LCP element: <img> section.apertura.bz-hero:nth-of-type(1) > div.contenedor > div.bz-hero-captura.sec-paralaje-vivo:nth-of-type(2) > a.sitio-foto.bz-captura-hero > img (https://demarkstudio.ca/static/img/portada/dashboard-1200.webp?v=6bbc2e3d)",
+        "Third-party domains: cloudflareinsights.com"
+      ],
+      "issues": [
+        {
+          "area": "speed",
+          "concern": "lcp",
+          "severity": "medium",
+          "title": "Make the main content appear faster on phones",
+          "why": "On a mid-range phone with a slow connection the main content took 2.55 s to appear; Google recommends under 2.5 s, and slow pages lose visitors and rank lower. The slowest item is the large image at the top of the page; a smaller, compressed version usually fixes it.",
+          "who": "your web developer",
+          "technical": "LCP 2,548 ms",
+          "area_title": "Speed"
+        },
+        {
+          "area": "speed",
+          "concern": "tbt",
+          "severity": "high",
+          "title": "Cut down the scripts that run while the page loads",
+          "why": "On a phone the page was too busy to respond for 625 ms while loading (target: under 200 ms), so taps and scrolling feel sluggish.",
+          "who": "your web developer",
+          "technical": "TBT 625 ms",
+          "area_title": "Speed"
+        }
+      ]
+    },
+    {
+      "key": "accessibility",
+      "title": "Accessibility",
+      "weight": 15,
+      "tool": "a11y-audit",
+      "checked": true,
+      "score": 70,
+      "light": "amber",
+      "verdict": "2 problem(s) that make the site harder to use for some visitors (2 serious).",
+      "reason": "",
+      "details": [
+        "Page: https://demarkstudio.ca/en/; axe-core 4.13.0; keyboard sample 30 Tab stops",
+        "SERIOUS: focus-offscreen [2.4.7, 2.4.11] x10: Focused element is off-screen or has zero size. Fix: Bring focused items into view (scroll carousels to the focused slide, show skip links on :focus) or make hidden ones inert.",
+        "  - #herramientas > div > div:nth-of-type(2) > ul",
+        "  - #herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > article > a",
+        "  - #herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(2) > article > a",
+        "SERIOUS: text-zoom-overflow [1.4.4, 1.4.10] x1: Page scrolls horizontally with text at 200%. Fix: Use relative widths (%, rem, max-width) and allow long words to wrap (overflow-wrap:anywhere).",
+        "  - #nav"
+      ],
+      "issues": [
+        {
+          "area": "accessibility",
+          "concern": "a11y:Make keyboard navigation follow what is on screen",
+          "severity": "high",
+          "title": "Make keyboard navigation follow what is on screen",
+          "why": "Visitors who use the keyboard instead of a mouse land on items they cannot see, so they lose their place.",
+          "who": "your web developer",
+          "technical": "focus-offscreen: Focused element is off-screen or has zero size",
+          "area_title": "Accessibility"
+        },
+        {
+          "area": "accessibility",
+          "concern": "a11y:Keep the layout working when visitors enlarge the text",
+          "severity": "high",
+          "title": "Keep the layout working when visitors enlarge the text",
+          "why": "People with low vision enlarge the text; at 200% part of this page no longer fits and has to be scrolled sideways or is cut off.",
+          "who": "your web developer",
+          "technical": "text-zoom-overflow: Page scrolls horizontally with text at 200%",
+          "area_title": "Accessibility"
+        }
+      ]
+    },
+    {
+      "key": "privacy",
+      "title": "Privacy and consent",
+      "weight": 15,
+      "tool": "consent-tracker-scan",
+      "checked": true,
+      "score": 98,
+      "light": "green",
+      "verdict": "No tracking before consent; only low-risk services load (no consent banner).",
+      "reason": "",
+      "details": [
+        "1 cookie(s) (0 third-party), 0 storage key(s), 1 third-party host(s); no consent banner",
+        "LOW: Cloudflare Web Analytics (cookieless analytics) loaded before consent. 1 request(s) to static.cloudflareinsights.com.",
+        "Third party: static.cloudflareinsights.com (cookieless_analytics, Cloudflare Web Analytics)",
+        "General information about privacy risk, not legal advice."
+      ],
+      "issues": []
+    },
+    {
+      "key": "seo",
+      "title": "Search engines (SEO)",
+      "weight": 15,
+      "tool": "site-seo-crawler",
+      "checked": true,
+      "score": 99,
+      "light": "green",
+      "verdict": "In good shape for search engines: 7 page(s) checked, average 98.6/100.",
+      "reason": "",
+      "details": [
+        "10 URL(s) requested, 7 page(s) scored, 0 error(s), 2 warning(s), 2 notice(s); robots.txt found; sitemap URLs 28",
+        "Crawl stopped at the page limit; other pages were not checked.",
+        "WARNING: title_length https://demarkstudio.ca/en/: Title is 82 characters (recommended 30-60)",
+        "WARNING: title_length https://demarkstudio.ca/en/for/salons: Title is 63 characters (recommended 30-60)",
+        "NOTICE: description_length https://demarkstudio.ca/en/for/salons: Meta description is 180 characters (recommended 70-160)",
+        "NOTICE: not_in_sitemap https://demarkstudio.ca/en/start: Reachable, indexable page that is not in the sitemap"
+      ],
+      "issues": [
+        {
+          "area": "seo",
+          "concern": "seo:titles",
+          "severity": "low",
+          "title": "Keep page titles between 30 and 60 characters",
+          "why": "Longer titles are cut off in search results.",
+          "who": "whoever edits the website's content",
+          "technical": "title_length x2: https://demarkstudio.ca/en/ Title is 82 characters (recommended 30-60)",
+          "area_title": "Search engines (SEO)"
+        },
+        {
+          "area": "seo",
+          "concern": "seo:descriptions",
+          "severity": "low",
+          "title": "Keep page summaries between 70 and 160 characters",
+          "why": "Longer summaries are cut off in search results.",
+          "who": "whoever edits the website's content",
+          "technical": "description_length x1: https://demarkstudio.ca/en/for/salons Meta description is 180 characters (recommended 70-160)",
+          "area_title": "Search engines (SEO)"
+        },
+        {
+          "area": "seo",
+          "concern": "seo:sitemap",
+          "severity": "low",
+          "title": "Keep the sitemap in step with the site's links",
+          "why": "The sitemap is the list of pages you give to Google; pages missing from it, or listed but not linked, are found late or not at all.",
+          "who": "your web developer",
+          "technical": "not_in_sitemap x1: https://demarkstudio.ca/en/start Reachable, indexable page that is not in the sitemap",
+          "area_title": "Search engines (SEO)"
+        }
+      ]
+    },
+    {
+      "key": "email",
+      "title": "Email deliverability",
+      "weight": 10,
+      "tool": "email-dns-check",
+      "checked": true,
+      "score": 90,
+      "light": "green",
+      "verdict": "Email authentication is set up, with gaps in DMARC.",
+      "reason": "",
+      "details": [
+        "MX: PASS, 1 MX host(s) (Google Workspace), all resolve",
+        "SPF: PASS, 1 record, 1/10 DNS lookups, 0/2 void lookups, ends with ~all",
+        "DMARC: WARN, p=none, aggregate reports on",
+        "  WARN: DMARC policy is p=none (monitoring only)",
+        "  Publish: _dmarc.demarkstudio.ca. TXT \"v=DMARC1; p=quarantine; rua=mailto:hola@demarkstudio.ca\"",
+        "DKIM: PASS, 1 key(s) found: google (2048-bit)",
+        "MTA-STS: INFO, Not published (optional)",
+        "TLS-RPT: INFO, Not published (optional)",
+        "BIMI: INFO, Not published (optional)"
+      ],
+      "issues": [
+        {
+          "area": "email",
+          "concern": "email:DMARC",
+          "severity": "medium",
+          "title": "Stop others from sending email that pretends to be from your domain",
+          "why": "The domain does not yet tell mail providers to reject fake email using your address, so scam messages that look like they come from you can still reach inboxes. Enforcing it also helps your real mail avoid spam folders.",
+          "who": "whoever manages your domain's DNS (often your web developer or IT provider)",
+          "technical": "DMARC: p=none, aggregate reports on",
+          "area_title": "Email deliverability"
+        }
+      ]
+    },
+    {
+      "key": "social",
+      "title": "Social sharing",
+      "weight": 5,
+      "tool": "og-card-check",
+      "checked": true,
+      "score": 84,
+      "light": "green",
+      "verdict": "Shared links show a preview card, with small issues.",
+      "reason": "",
+      "details": [
+        "WARN: title is 82 chars; likely truncated above ~60",
+        "WARN: twitter title is 82 chars; X truncates around 70",
+        "Image og:image: HTTP 200 image/png 1200x630, 49255 bytes",
+        "Image twitter:image: HTTP 200 image/png 1200x630, 49255 bytes",
+        "Image favicon: HTTP 200 image/svg+xml ?, size unknown",
+        "Image apple-touch-icon: HTTP 200 image/png ?, 6088 bytes"
+      ],
+      "issues": [
+        {
+          "area": "social",
+          "concern": "og-length",
+          "severity": "low",
+          "title": "Shorten the title shown when the site is shared",
+          "why": "Social networks cut long titles off after about 60 characters, so the end of the message is lost.",
+          "who": "whoever edits the website's content",
+          "technical": "title is 82 chars; likely truncated above ~60",
+          "area_title": "Social sharing"
+        }
+      ]
+    },
+    {
+      "key": "http",
+      "title": "HTTP and hosting",
+      "weight": 5,
+      "tool": "http-protocol-check",
+      "checked": true,
+      "score": 80,
+      "light": "green",
+      "verdict": "HTTP/2, HTTP/3 advertised; 2 outdated or missing setting(s) to update.",
+      "reason": "",
+      "details": [
+        "Host: demarkstudio.ca:443; HTTP/2, HTTP/3 advertised",
+        "TLS versions accepted: TLSv1.0, TLSv1.1, TLSv1.2, TLSv1.3",
+        "Certificate: 71 day(s) left, issuer CN=WE1,O=Google Trust Services,C=US",
+        "WARNING: tls-legacy: TLSv1.0 is accepted (deprecated by RFC 8996)",
+        "WARNING: tls-legacy: TLSv1.1 is accepted (deprecated by RFC 8996)",
+        "INFO: ipv6-not-tested: IPv6 not tested: this machine has no IPv6 route to the published AAAA address"
+      ],
+      "issues": [
+        {
+          "area": "http",
+          "concern": "tls-legacy",
+          "severity": "medium",
+          "title": "Switch off the old encryption versions (TLS 1.0 and 1.1)",
+          "why": "They are retired standards with known weaknesses. Current browsers no longer use them, so switching them off does not lock out real visitors.",
+          "who": "your web host (often one setting in the hosting or CDN dashboard)",
+          "technical": "TLSv1.0 is accepted (deprecated by RFC 8996)",
+          "area_title": "HTTP and hosting"
+        }
+      ]
+    }
+  ],
+  "top_fixes": [
+    {
+      "area": "speed",
+      "concern": "tbt",
+      "severity": "high",
+      "title": "Cut down the scripts that run while the page loads",
+      "why": "On a phone the page was too busy to respond for 625 ms while loading (target: under 200 ms), so taps and scrolling feel sluggish.",
+      "who": "your web developer",
+      "technical": "TBT 625 ms",
+      "area_title": "Speed"
+    },
+    {
+      "area": "accessibility",
+      "concern": "a11y:Make keyboard navigation follow what is on screen",
+      "severity": "high",
+      "title": "Make keyboard navigation follow what is on screen",
+      "why": "Visitors who use the keyboard instead of a mouse land on items they cannot see, so they lose their place.",
+      "who": "your web developer",
+      "technical": "focus-offscreen: Focused element is off-screen or has zero size",
+      "area_title": "Accessibility"
+    },
+    {
+      "area": "email",
+      "concern": "email:DMARC",
+      "severity": "medium",
+      "title": "Stop others from sending email that pretends to be from your domain",
+      "why": "The domain does not yet tell mail providers to reject fake email using your address, so scam messages that look like they come from you can still reach inboxes. Enforcing it also helps your real mail avoid spam folders.",
+      "who": "whoever manages your domain's DNS (often your web developer or IT provider)",
+      "technical": "DMARC: p=none, aggregate reports on",
+      "area_title": "Email deliverability"
+    }
+  ],
+  "tools": [
+    {
+      "tool": "security-headers-audit",
+      "area": "security",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 3.3,
+      "command": [
+        "python",
+        "-m",
+        "security_headers_audit",
+        "https://demarkstudio.ca/",
+        "--format",
+        "json",
+        "--delay",
+        "1",
+        "--user-agent",
+        "website-report-card/1.0 (+https://github.com/dreadmoreeee/website-report-card)"
+      ]
+    },
+    {
+      "tool": "web-vitals-lite",
+      "area": "speed",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 8.5,
+      "command": [
+        "python",
+        "-m",
+        "web_vitals_lite",
+        "https://demarkstudio.ca/",
+        "--profile",
+        "mobile",
+        "--runs",
+        "1",
+        "--format",
+        "json"
+      ]
+    },
+    {
+      "tool": "a11y-audit",
+      "area": "accessibility",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 13.7,
+      "command": [
+        "python",
+        "-m",
+        "a11y_audit",
+        "https://demarkstudio.ca/",
+        "--format",
+        "json",
+        "--quiet",
+        "--user-agent",
+        "website-report-card/1.0 (+https://github.com/dreadmoreeee/website-report-card)"
+      ]
+    },
+    {
+      "tool": "consent-tracker-scan",
+      "area": "privacy",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 4.9,
+      "command": [
+        "python",
+        "-m",
+        "consent_tracker_scan",
+        "https://demarkstudio.ca/",
+        "--pages",
+        "1",
+        "--quiet",
+        "--json",
+        "<tmp>/consent.json"
+      ]
+    },
+    {
+      "tool": "site-seo-crawler",
+      "area": "seo",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 12.4,
+      "command": [
+        "python",
+        "-m",
+        "site_seo_crawler",
+        "https://demarkstudio.ca/",
+        "--max-pages",
+        "10",
+        "--format",
+        "json",
+        "--delay",
+        "1",
+        "--out-dir",
+        "<tmp>/seo",
+        "--user-agent",
+        "website-report-card/1.0 (+https://github.com/dreadmoreeee/website-report-card)"
+      ]
+    },
+    {
+      "tool": "og-card-check",
+      "area": "social",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 3.4,
+      "command": [
+        "python",
+        "-m",
+        "og_card_check",
+        "https://demarkstudio.ca/",
+        "--no-preview",
+        "--json",
+        "-",
+        "--delay",
+        "1"
+      ]
+    },
+    {
+      "tool": "email-dns-check",
+      "area": "email",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 0.9,
+      "command": [
+        "python",
+        "-m",
+        "email_dns_check",
+        "demarkstudio.ca",
+        "--format",
+        "json"
+      ]
+    },
+    {
+      "tool": "http-protocol-check",
+      "area": "http",
+      "status": "ok",
+      "reason": "",
+      "exit_code": 0,
+      "seconds": 6.9,
+      "command": [
+        "python",
+        "-m",
+        "http_protocol_check",
+        "https://demarkstudio.ca",
+        "--format",
+        "json",
+        "--fail-on",
+        "never"
+      ]
+    }
+  ]
+}

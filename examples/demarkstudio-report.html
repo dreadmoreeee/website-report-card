@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website report card: demarkstudio.ca</title>
+<style>:root{--brand:#1f4e79;--brand-text:#ffffff}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1f2328;
+background:#f4f5f7;line-height:1.45;font-size:15px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px 40px}
+header.top{background:var(--brand);color:var(--brand-text);padding:18px 0}
+header.top .wrap{display:flex;align-items:center;gap:16px;padding-bottom:0}
+header.top img{max-height:48px;max-width:180px;background:#fff;border-radius:6px;padding:4px}
+header.top .agency{font-weight:600;font-size:17px}
+header.top .meta{margin-left:auto;text-align:right;font-size:13px;opacity:.95}
+h1{font-size:26px;margin:26px 0 4px}
+h2{font-size:19px;margin:28px 0 12px}
+.url{color:#57606a;word-break:break-all;margin:0 0 18px}
+.summary{display:flex;gap:22px;align-items:center;background:#fff;border-radius:12px;padding:20px;
+border:1px solid #d8dee4}
+.grade{flex:0 0 auto;width:104px;height:104px;border-radius:50%;display:flex;flex-direction:column;
+align-items:center;justify-content:center;color:#fff;font-weight:700}
+.grade .letter{font-size:46px;line-height:1}
+.grade .num{font-size:13px;font-weight:600}
+.summary p{margin:4px 0}
+.lights{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:13px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:5px}
+.fixes{list-style:none;padding:0;margin:0;counter-reset:fix}
+.fixes li{background:#fff;border:1px solid #d8dee4;border-left:6px solid var(--brand);border-radius:10px;
+padding:14px 16px 12px 52px;margin-bottom:10px;position:relative;break-inside:avoid}
+.fixes li::before{counter-increment:fix;content:counter(fix);position:absolute;left:14px;top:13px;
+width:26px;height:26px;border-radius:50%;background:var(--brand);color:var(--brand-text);
+text-align:center;font-weight:700;line-height:26px}
+.fixes .what{font-weight:600;font-size:16px}
+.fixes .area{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#57606a}
+.fixes p{margin:4px 0 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+.card{background:#fff;border:1px solid #d8dee4;border-top:6px solid var(--light);border-radius:10px;
+padding:14px 16px;break-inside:avoid;page-break-inside:avoid}
+.card h3{margin:0;font-size:16px;display:flex;align-items:center;gap:8px}
+.card .score{margin-left:auto;font-size:15px;color:var(--light);white-space:nowrap}
+.card .state{font-size:12px;font-weight:600;color:var(--light);text-transform:uppercase;letter-spacing:.04em}
+.card .verdict{margin:8px 0}
+.card.off{border-top-color:#9ca3af}
+.card.off .verdict{color:#57606a}
+details{margin-top:6px;font-size:13px}
+summary{cursor:pointer;color:#0b5cad}
+details ul{margin:8px 0 0;padding-left:18px;overflow-wrap:anywhere}
+details li{margin:2px 0}
+details li.sub{list-style:circle;margin-left:18px}
+.tool{color:#57606a;font-size:12px;margin-top:6px}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:13px}
+th,td{border:1px solid #d8dee4;padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#f6f8fa}
+.note{font-size:13px;color:#57606a}
+footer{margin-top:28px;font-size:12px;color:#57606a}
+@media print{
+ @page{size:Letter;margin:14mm}
+ body{background:#fff;font-size:12px}
+ .wrap{max-width:none;padding:0}
+ header.top{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ header.top .wrap{padding:0 12px}
+ .grade,.dot,.fixes li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .card,.fixes li,.summary,table tr{break-inside:avoid;page-break-inside:avoid}
+ .cards{display:block}
+ .card{margin-bottom:10px}
+ h2{break-after:avoid;page-break-after:avoid}
+ summary{color:#1f2328;list-style:none}
+ summary::-webkit-details-marker{display:none}
+ details::details-content{content-visibility:visible;display:block}
+}
+</style>
+<script>window.addEventListener('beforeprint',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="agency">DeMark Studio</div>
+<div class="meta">Prepared for DeMark Studio (self-audit)<br>2026-09-29</div></div></header>
+<main class="wrap">
+<h1>Website report card</h1><p class="url">https://demarkstudio.ca/</p>
+<section class="summary" aria-label="Overall grade">
+<div class="grade" style="background:#2f7d32"><span class="letter">B</span><span class="num">84/100</span></div>
+<div>
+<p><strong>Overall grade B</strong>, based on 8 of 8 areas.</p>
+<div class="lights">
+<span><span class="dot" style="background:#1a7f37"></span>Security: Good</span>
+<span><span class="dot" style="background:#c62828"></span>Speed: Poor</span>
+<span><span class="dot" style="background:#9a6700"></span>Accessibility: Needs work</span>
+<span><span class="dot" style="background:#1a7f37"></span>Privacy and consent: Good</span>
+<span><span class="dot" style="background:#1a7f37"></span>Search engines (SEO): Good</span>
+<span><span class="dot" style="background:#1a7f37"></span>Email deliverability: Good</span>
+<span><span class="dot" style="background:#1a7f37"></span>Social sharing: Good</span>
+<span><span class="dot" style="background:#1a7f37"></span>HTTP and hosting: Good</span>
+</div></div></section>
+<h2>The most important fixes</h2>
+<ol class="fixes">
+<li><div class="area">Speed &middot; high priority</div><div class="what">Cut down the scripts that run while the page loads</div><p><strong>Why it matters:</strong> On a phone the page was too busy to respond for 625 ms while loading (target: under 200 ms), so taps and scrolling feel sluggish.</p><p><strong>Who would fix it:</strong> your web developer</p></li>
+<li><div class="area">Accessibility &middot; high priority</div><div class="what">Make keyboard navigation follow what is on screen</div><p><strong>Why it matters:</strong> Visitors who use the keyboard instead of a mouse land on items they cannot see, so they lose their place.</p><p><strong>Who would fix it:</strong> your web developer</p></li>
+<li><div class="area">Email deliverability &middot; medium priority</div><div class="what">Stop others from sending email that pretends to be from your domain</div><p><strong>Why it matters:</strong> The domain does not yet tell mail providers to reject fake email using your address, so scam messages that look like they come from you can still reach inboxes. Enforcing it also helps your real mail avoid spam folders.</p><p><strong>Who would fix it:</strong> whoever manages your domain&#x27;s DNS (often your web developer or IT provider)</p></li>
+</ol>
+<h2>Report card</h2><div class="cards">
+<section class="card" style="--light:#1a7f37"><h3><span class="dot" style="background:#1a7f37"></span>Security<span class="score">98/100</span></h3><div class="state">Good</div><p class="verdict">Well protected: security settings grade A+ (98/100).</p>
+<details><summary>Technical details</summary><ul>
+<li>HTTPS redirect: 10/10</li>
+<li>TLS: 10/10</li>
+<li>Strict-Transport-Security: 20/20</li>
+<li>Content-Security-Policy: 20/20</li>
+<li>Clickjacking (frame-ancestors / X-Frame-Options): 10/10</li>
+<li>X-Content-Type-Options: 5/5</li>
+<li>Referrer-Policy: 5/5</li>
+<li>Permissions-Policy: 5/5</li>
+<li>COOP / CORP: 3/5</li>
+<li class="sub">LOW: No Cross-Origin-Resource-Policy. Fix: Cross-Origin-Resource-Policy: same-origin</li>
+<li>Cookies: 5/5</li>
+<li>Server / version leakage: 5/5</li>
+</ul></details>
+<div class="tool">Checked with security-headers-audit</div></section>
+<section class="card" style="--light:#c62828"><h3><span class="dot" style="background:#c62828"></span>Speed<span class="score">49/100</span></h3><div class="state">Poor</div><p class="verdict">Slow on phones: main content in 2.55 s, page busy for 625 ms (targets: 2.5 s and 200 ms).</p>
+<details><summary>Technical details</summary><ul>
+<li>Profile: mobile (throttled CPU and network), 1 run(s), final URL https://demarkstudio.ca/en/</li>
+<li>LCP (largest content shown): 2,548 ms (needs improvement, good &lt;= 2,500 ms)</li>
+<li>TBT (total blocking time): 625 ms (poor, good &lt;= 200 ms)</li>
+<li>CLS (layout shift): 0.000 (good, good &lt;= 0.1)</li>
+<li>FCP (first content): 2,492 ms</li>
+<li>TTFB (server response): 374 ms</li>
+<li>Page weight: 678.2 kB in 29 requests</li>
+<li>Render-blocking resources in &lt;head&gt;: 2</li>
+<li>LCP element: &lt;img&gt; section.apertura.bz-hero:nth-of-type(1) &gt; div.contenedor &gt; div.bz-hero-captura.sec-paralaje-vivo:nth-of-type(2) &gt; a.sitio-foto.bz-captura-hero &gt; img (https://demarkstudio.ca/static/img/portada/dashboard-1200.webp?v=6bbc2e3d)</li>
+<li>Third-party domains: cloudflareinsights.com</li>
+</ul></details>
+<div class="tool">Checked with web-vitals-lite</div></section>
+<section class="card" style="--light:#9a6700"><h3><span class="dot" style="background:#9a6700"></span>Accessibility<span class="score">70/100</span></h3><div class="state">Needs work</div><p class="verdict">2 problem(s) that make the site harder to use for some visitors (2 serious).</p>
+<details><summary>Technical details</summary><ul>
+<li>Page: https://demarkstudio.ca/en/; axe-core 4.13.0; keyboard sample 30 Tab stops</li>
+<li>SERIOUS: focus-offscreen [2.4.7, 2.4.11] x10: Focused element is off-screen or has zero size. Fix: Bring focused items into view (scroll carousels to the focused slide, show skip links on :focus) or make hidden ones inert.</li>
+<li class="sub">#herramientas &gt; div &gt; div:nth-of-type(2) &gt; ul</li>
+<li class="sub">#herramientas &gt; div &gt; div:nth-of-type(2) &gt; ul &gt; li:nth-of-type(1) &gt; article &gt; a</li>
+<li class="sub">#herramientas &gt; div &gt; div:nth-of-type(2) &gt; ul &gt; li:nth-of-type(2) &gt; article &gt; a</li>
+<li>SERIOUS: text-zoom-overflow [1.4.4, 1.4.10] x1: Page scrolls horizontally with text at 200%. Fix: Use relative widths (%, rem, max-width) and allow long words to wrap (overflow-wrap:anywhere).</li>
+<li class="sub">#nav</li>
+</ul></details>
+<div class="tool">Checked with a11y-audit</div></section>
+<section class="card" style="--light:#1a7f37"><h3><span class="dot" style="background:#1a7f37"></span>Privacy and consent<span class="score">98/100</span></h3><div class="state">Good</div><p class="verdict">No tracking before consent; only low-risk services load (no consent banner).</p>
+<details><summary>Technical details</summary><ul>
+<li>1 cookie(s) (0 third-party), 0 storage key(s), 1 third-party host(s); no consent banner</li>
+<li>LOW: Cloudflare Web Analytics (cookieless analytics) loaded before consent. 1 request(s) to static.cloudflareinsights.com.</li>
+<li>Third party: static.cloudflareinsights.com (cookieless_analytics, Cloudflare Web Analytics)</li>
+<li>General information about privacy risk, not legal advice.</li>
+</ul></details>
+<div class="tool">Checked with consent-tracker-scan</div></section>
+<section class="card" style="--light:#1a7f37"><h3><span class="dot" style="background:#1a7f37"></span>Search engines (SEO)<span class="score">99/100</span></h3><div class="state">Good</div><p class="verdict">In good shape for search engines: 7 page(s) checked, average 98.6/100.</p>
+<details><summary>Technical details</summary><ul>
+<li>10 URL(s) requested, 7 page(s) scored, 0 error(s), 2 warning(s), 2 notice(s); robots.txt found; sitemap URLs 28</li>
+<li>Crawl stopped at the page limit; other pages were not checked.</li>
+<li>WARNING: title_length https://demarkstudio.ca/en/: Title is 82 characters (recommended 30-60)</li>
+<li>WARNING: title_length https://demarkstudio.ca/en/for/salons: Title is 63 characters (recommended 30-60)</li>
+<li>NOTICE: description_length https://demarkstudio.ca/en/for/salons: Meta description is 180 characters (recommended 70-160)</li>
+<li>NOTICE: not_in_sitemap https://demarkstudio.ca/en/start: Reachable, indexable page that is not in the sitemap</li>
+</ul></details>
+<div class="tool">Checked with site-seo-crawler</div></section>
+<section class="card" style="--light:#1a7f37"><h3><span class="dot" style="background:#1a7f37"></span>Email deliverability<span class="score">90/100</span></h3><div class="state">Good</div><p class="verdict">Email authentication is set up, with gaps in DMARC.</p>
+<details><summary>Technical details</summary><ul>
+<li>MX: PASS, 1 MX host(s) (Google Workspace), all resolve</li>
+<li>SPF: PASS, 1 record, 1/10 DNS lookups, 0/2 void lookups, ends with ~all</li>
+<li>DMARC: WARN, p=none, aggregate reports on</li>
+<li class="sub">WARN: DMARC policy is p=none (monitoring only)</li>
+<li class="sub">Publish: _dmarc.demarkstudio.ca. TXT &quot;v=DMARC1; p=quarantine; rua=mailto:hola@demarkstudio.ca&quot;</li>
+<li>DKIM: PASS, 1 key(s) found: google (2048-bit)</li>
+<li>MTA-STS: INFO, Not published (optional)</li>
+<li>TLS-RPT: INFO, Not published (optional)</li>
+<li>BIMI: INFO, Not published (optional)</li>
+</ul></details>
+<div class="tool">Checked with email-dns-check</div></section>
+<section class="card" style="--light:#1a7f37"><h3><span class="dot" style="background:#1a7f37"></span>Social sharing<span class="score">84/100</span></h3><div class="state">Good</div><p class="verdict">Shared links show a preview card, with small issues.</p>
+<details><summary>Technical details</summary><ul>
+<li>WARN: title is 82 chars; likely truncated above ~60</li>
+<li>WARN: twitter title is 82 chars; X truncates around 70</li>
+<li>Image og:image: HTTP 200 image/png 1200x630, 49255 bytes</li>
+<li>Image twitter:image: HTTP 200 image/png 1200x630, 49255 bytes</li>
+<li>Image favicon: HTTP 200 image/svg+xml ?, size unknown</li>
+<li>Image apple-touch-icon: HTTP 200 image/png ?, 6088 bytes</li>
+</ul></details>
+<div class="tool">Checked with og-card-check</div></section>
+<section class="card" style="--light:#1a7f37"><h3><span class="dot" style="background:#1a7f37"></span>HTTP and hosting<span class="score">80/100</span></h3><div class="state">Good</div><p class="verdict">HTTP/2, HTTP/3 advertised; 2 outdated or missing setting(s) to update.</p>
+<details><summary>Technical details</summary><ul>
+<li>Host: demarkstudio.ca:443; HTTP/2, HTTP/3 advertised</li>
+<li>TLS versions accepted: TLSv1.0, TLSv1.1, TLSv1.2, TLSv1.3</li>
+<li>Certificate: 71 day(s) left, issuer CN=WE1,O=Google Trust Services,C=US</li>
+<li>WARNING: tls-legacy: TLSv1.0 is accepted (deprecated by RFC 8996)</li>
+<li>WARNING: tls-legacy: TLSv1.1 is accepted (deprecated by RFC 8996)</li>
+<li>INFO: ipv6-not-tested: IPv6 not tested: this machine has no IPv6 route to the published AAAA address</li>
+</ul></details>
+<div class="tool">Checked with http-protocol-check</div></section>
+</div>
+<h2>How this report was made</h2>
+<table><thead><tr><th>Tool</th><th>Area</th><th>Status</th><th>Time</th></tr></thead><tbody>
+<tr><td>security-headers-audit</td><td>Security</td><td>ran</td><td>3.3 s</td></tr>
+<tr><td>web-vitals-lite</td><td>Speed</td><td>ran</td><td>8.5 s</td></tr>
+<tr><td>a11y-audit</td><td>Accessibility</td><td>ran</td><td>13.7 s</td></tr>
+<tr><td>consent-tracker-scan</td><td>Privacy and consent</td><td>ran</td><td>4.9 s</td></tr>
+<tr><td>site-seo-crawler</td><td>Search engines (SEO)</td><td>ran</td><td>12.4 s</td></tr>
+<tr><td>og-card-check</td><td>Social sharing</td><td>ran</td><td>3.4 s</td></tr>
+<tr><td>email-dns-check</td><td>Email deliverability</td><td>ran</td><td>0.9 s</td></tr>
+<tr><td>http-protocol-check</td><td>HTTP and hosting</td><td>ran</td><td>6.9 s</td></tr>
+</tbody></table>
+<p class="note">Overall grade: weighted average of the area scores (Security 20%, Speed 15%, Accessibility 15%, Privacy and consent 15%, Search engines (SEO) 15%, Email deliverability 10%, Social sharing 5%, HTTP and hosting 5%). Areas that were not checked are left out and the other weights are scaled up. A from 90, B from 80, C from 70, D from 60, F below. Lights: green from 80, amber from 50, red below 50. Speed is measured on a simulated mid-range phone with a slow connection, one page load.</p>
+<p class="note">Automated checks catch many common problems, not all of them. Privacy notes are general information, not legal advice.</p>
+<footer>Generated 2026-09-29T12:10:41+00:00 by website-report-card 1.0.0.</footer>
+</main></body></html>

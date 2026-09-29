@@ -1,0 +1,115 @@
+{
+  "tool": "consent-tracker-scan",
+  "version": "0.1.0",
+  "scanned_at": "2026-09-29T12:07:30Z",
+  "start_url": "https://demarkstudio.ca/",
+  "site": "demarkstudio.ca",
+  "options": {
+    "pages": 1,
+    "delay": 1.0,
+    "timeout": 30.0,
+    "wait_ms": 3000,
+    "robots": "robots.txt read from https://demarkstudio.ca/robots.txt",
+    "browser": "Chromium 151.0.7922.34 (headless, fresh profile per page)"
+  },
+  "consent_given": false,
+  "consent_banner": {
+    "detected": false,
+    "cmp": null,
+    "evidence": [],
+    "also_seen": []
+  },
+  "summary": {
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "pages_scanned": 1,
+    "cookies": 1,
+    "first_party_cookies": 1,
+    "third_party_cookies": 0,
+    "storage_keys": 0,
+    "third_party_hosts": 1,
+    "unknown_third_party_hosts": 0,
+    "trackers": []
+  },
+  "findings": [
+    {
+      "severity": "low",
+      "kind": "request",
+      "title": "Cloudflare Web Analytics (cookieless analytics) loaded before consent",
+      "detail": "1 request(s) to static.cloudflareinsights.com."
+    }
+  ],
+  "cookies": [
+    {
+      "name": "idioma",
+      "domain": "demarkstudio.ca",
+      "path": "/",
+      "party": "first",
+      "expires": "2027-09-29T12:07:31Z",
+      "expires_in_days": 365.0,
+      "secure": true,
+      "http_only": true,
+      "same_site": "Lax",
+      "value_length": 2,
+      "tracker": null,
+      "category": "unknown",
+      "severity": "info",
+      "pages": [
+        "https://demarkstudio.ca/en/"
+      ]
+    }
+  ],
+  "storage": [],
+  "third_party_hosts": [
+    {
+      "host": "static.cloudflareinsights.com",
+      "site": "cloudflareinsights.com",
+      "tracker": "Cloudflare Web Analytics",
+      "category": "cookieless_analytics",
+      "severity": "low",
+      "source": "https://developers.cloudflare.com/web-analytics/",
+      "requests": 1,
+      "resource_types": [
+        "script"
+      ],
+      "pages": [
+        "https://demarkstudio.ca/en/"
+      ]
+    }
+  ],
+  "third_party_requests": [
+    {
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495",
+      "host": "static.cloudflareinsights.com",
+      "method": "GET",
+      "resource_type": "script",
+      "tracker": "Cloudflare Web Analytics",
+      "category": "cookieless_analytics",
+      "severity": "low",
+      "count": 1,
+      "pages": [
+        "https://demarkstudio.ca/en/"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://demarkstudio.ca/",
+      "final_url": "https://demarkstudio.ca/en/",
+      "status": 200,
+      "title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "error": null,
+      "first_party_requests": 30,
+      "third_party_requests": 1,
+      "consent_banner": null
+    }
+  ],
+  "skipped_by_robots": [],
+  "disclaimer": "This report is general information, not legal advice.",
+  "notes": [
+    "This report is general information, not legal advice. It describes what a first-time visitor's browser did before any consent choice.",
+    "No analytics, advertising, social pixel or session replay activity was seen before consent on the scanned pages.",
+    "The scan only sees what loaded on the scanned pages within the wait time, from this network location and browser. Trackers that fire later, on scroll or on other pages are not covered."
+  ]
+}

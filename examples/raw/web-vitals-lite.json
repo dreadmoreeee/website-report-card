@@ -1,0 +1,196 @@
+{
+  "tool": "web-vitals-lite",
+  "version": "1.0.0",
+  "generated": "2026-09-29T12:07:16+00:00",
+  "settings": {
+    "runs": 1,
+    "profiles": {
+      "mobile": {
+        "viewport": "412x823",
+        "device_scale_factor": 2.625,
+        "is_mobile": true,
+        "cpu_slowdown": 4.0,
+        "network": {
+          "offline": false,
+          "latency": 150,
+          "downloadThroughput": 200000.0,
+          "uploadThroughput": 93750.0
+        }
+      }
+    },
+    "user_agent": {
+      "mobile": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36 web-vitals-lite/1.0 (+https://github.com/dreadmoreeee/web-vitals-lite)"
+    },
+    "quiet_window_s": 2.5,
+    "delay_s": 1.0,
+    "timeout_s": 60.0
+  },
+  "results": [
+    {
+      "url": "https://demarkstudio.ca/",
+      "profile": "mobile",
+      "runs_ok": 1,
+      "runs_failed": 0,
+      "errors": [],
+      "median": {
+        "ttfb_ms": 374.05300001055,
+        "fcp_ms": 2492.0,
+        "lcp_ms": 2548.0,
+        "cls": 0.0,
+        "tbt_ms": 625.0,
+        "long_tasks": 7,
+        "post_load_long_tasks": 0,
+        "post_load_blocking_ms": 0,
+        "dcl_ms": 3851.7000000029802,
+        "load_ms": 4762.80000000447,
+        "requests": 29,
+        "failed_requests": 0,
+        "total_bytes": 678180,
+        "first_party_bytes": 667814,
+        "third_party_bytes": 10366,
+        "render_blocking": 2,
+        "document_bytes": 13806,
+        "script_bytes": 94295,
+        "stylesheet_bytes": 21937,
+        "image_bytes": 405052,
+        "font_bytes": 141850,
+        "other_bytes": 1240
+      },
+      "values": {
+        "ttfb_ms": [
+          374.05300001055
+        ],
+        "fcp_ms": [
+          2492.0
+        ],
+        "lcp_ms": [
+          2548.0
+        ],
+        "cls": [
+          0.0
+        ],
+        "tbt_ms": [
+          625.0
+        ],
+        "long_tasks": [
+          7
+        ],
+        "post_load_long_tasks": [
+          0
+        ],
+        "post_load_blocking_ms": [
+          0
+        ],
+        "dcl_ms": [
+          3851.7000000029802
+        ],
+        "load_ms": [
+          4762.80000000447
+        ],
+        "requests": [
+          29
+        ],
+        "failed_requests": [
+          0
+        ],
+        "total_bytes": [
+          678180
+        ],
+        "first_party_bytes": [
+          667814
+        ],
+        "third_party_bytes": [
+          10366
+        ],
+        "render_blocking": [
+          2
+        ],
+        "document_bytes": [
+          13806
+        ],
+        "script_bytes": [
+          94295
+        ],
+        "stylesheet_bytes": [
+          21937
+        ],
+        "image_bytes": [
+          405052
+        ],
+        "font_bytes": [
+          141850
+        ],
+        "other_bytes": [
+          1240
+        ]
+      },
+      "final_url": "https://demarkstudio.ca/en/",
+      "details": {
+        "lcp_element": {
+          "tag": "img",
+          "selector": "section.apertura.bz-hero:nth-of-type(1) > div.contenedor > div.bz-hero-captura.sec-paralaje-vivo:nth-of-type(2) > a.sitio-foto.bz-captura-hero > img",
+          "url": "https://demarkstudio.ca/static/img/portada/dashboard-1200.webp?v=6bbc2e3d",
+          "size": 88857
+        },
+        "layout_shifts": 0,
+        "cls_window": null,
+        "post_load": {
+          "count": 0,
+          "blocking_ms": 0,
+          "max_ms": 0.0
+        },
+        "by_type": {
+          "document": {
+            "bytes": 13806,
+            "requests": 1
+          },
+          "script": {
+            "bytes": 94295,
+            "requests": 10
+          },
+          "stylesheet": {
+            "bytes": 21937,
+            "requests": 2
+          },
+          "image": {
+            "bytes": 405052,
+            "requests": 10
+          },
+          "font": {
+            "bytes": 141850,
+            "requests": 4
+          },
+          "other": {
+            "bytes": 1240,
+            "requests": 2
+          }
+        },
+        "third_party_domains": {
+          "cloudflareinsights.com": 10366
+        },
+        "render_blocking": [
+          {
+            "kind": "stylesheet",
+            "url": "https://demarkstudio.ca/static/dist/sitio-c5ce2cfe5edd.css",
+            "media": null,
+            "bytes": 16140
+          },
+          {
+            "kind": "stylesheet",
+            "url": "https://demarkstudio.ca/static/dist/borrador-721475c70300.css",
+            "media": null,
+            "bytes": 5797
+          }
+        ],
+        "failed_requests": [],
+        "observer_errors": []
+      },
+      "budget": []
+    }
+  ],
+  "summary": {
+    "budget_breaches": 0,
+    "failed_targets": 0,
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,95 @@
+[
+  {
+    "url": "https://demarkstudio.ca/",
+    "final_url": "https://demarkstudio.ca/en/",
+    "status": 200,
+    "content_type": "text/html",
+    "tags": {
+      "og:title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "og:description": "Your website, bookings and day-to-day business, together. Complete is $99 a month. Need bookings, client records and email reminders? Essential is $49 a month.",
+      "og:image": "https://demarkstudio.ca/static/img/og/demark.png?v=bace9141",
+      "og:image:width": "1200",
+      "og:image:height": "630",
+      "og:image:alt": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "og:url": "https://demarkstudio.ca/en/",
+      "og:type": "website",
+      "og:site_name": "DeMark",
+      "twitter:card": "summary_large_image",
+      "twitter:title": "",
+      "twitter:description": "",
+      "twitter:image": "https://demarkstudio.ca/static/img/og/demark.png?v=bace9141",
+      "title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "description": "Your website, bookings and day-to-day business, together. Complete is $99 a month. Need bookings, client records and email reminders? Essential is $49 a month.",
+      "canonical": "https://demarkstudio.ca/en/",
+      "icon": "/static/img/favicon.svg",
+      "apple-touch-icon": "/static/img/apple-touch-icon.png"
+    },
+    "resolved": {
+      "title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "description": "Your website, bookings and day-to-day business, together. Complete is $99 a month. Need bookings, client records and email reminders? Essential is $49 a month.",
+      "image": "https://demarkstudio.ca/static/img/og/demark.png?v=bace9141",
+      "x_title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "x_description": "Your website, bookings and day-to-day business, together. Complete is $99 a month. Need bookings, client records and email reminders? Essential is $49 a month.",
+      "x_image": "https://demarkstudio.ca/static/img/og/demark.png?v=bace9141",
+      "site_name": "DeMark",
+      "fallbacks": [
+        "twitter:title missing: X falls back to og:title",
+        "twitter:description missing: X falls back to og:description"
+      ]
+    },
+    "findings": [
+      {
+        "level": "warn",
+        "code": "title-long",
+        "message": "title is 82 chars; likely truncated above ~60"
+      },
+      {
+        "level": "warn",
+        "code": "twitter-title-long",
+        "message": "twitter title is 82 chars; X truncates around 70"
+      }
+    ],
+    "images": {
+      "og:image": {
+        "url": "https://demarkstudio.ca/static/img/og/demark.png?v=bace9141",
+        "status": 200,
+        "content_type": "image/png",
+        "bytes": 49255,
+        "width": 1200,
+        "height": 630,
+        "ratio": 1.905,
+        "error": ""
+      },
+      "twitter:image": {
+        "url": "https://demarkstudio.ca/static/img/og/demark.png?v=bace9141",
+        "status": 200,
+        "content_type": "image/png",
+        "bytes": 49255,
+        "width": 1200,
+        "height": 630,
+        "ratio": 1.905,
+        "error": ""
+      },
+      "favicon": {
+        "url": "https://demarkstudio.ca/static/img/favicon.svg",
+        "status": 200,
+        "content_type": "image/svg+xml",
+        "bytes": null,
+        "width": null,
+        "height": null,
+        "ratio": null,
+        "error": ""
+      },
+      "apple-touch-icon": {
+        "url": "https://demarkstudio.ca/static/img/apple-touch-icon.png",
+        "status": 200,
+        "content_type": "image/png",
+        "bytes": 6088,
+        "width": null,
+        "height": null,
+        "ratio": null,
+        "error": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,36 @@
+Website report card: https://demarkstudio.ca/
+Overall grade: B (84/100), 8 of 8 areas checked
+
+  GREEN  Security               98  Well protected: security settings grade A+ (98/100).
+  RED    Speed                  49  Slow on phones: main content in 2.55 s, page busy for 625 ms (targets: 2.5 s and 200 ms).
+  AMBER  Accessibility          70  2 problem(s) that make the site harder to use for some visitors (2 serious).
+  GREEN  Privacy and consent    98  No tracking before consent; only low-risk services load (no consent banner).
+  GREEN  Search engines (SEO)   99  In good shape for search engines: 7 page(s) checked, average 98.6/100.
+  GREEN  Email deliverability   90  Email authentication is set up, with gaps in DMARC.
+  GREEN  Social sharing         84  Shared links show a preview card, with small issues.
+  GREEN  HTTP and hosting       80  HTTP/2, HTTP/3 advertised; 2 outdated or missing setting(s) to update.
+
+Top 3 fixes:
+ 1. [Speed] Cut down the scripts that run while the page loads (high)
+    Why: On a phone the page was too busy to respond for 625 ms while loading (target: under 200 ms), so taps and scrolling feel sluggish.
+    Who: your web developer
+ 2. [Accessibility] Make keyboard navigation follow what is on screen (high)
+    Why: Visitors who use the keyboard instead of a mouse land on items they cannot see, so they lose their place.
+    Who: your web developer
+ 3. [Email deliverability] Stop others from sending email that pretends to be from your domain (medium)
+    Why: The domain does not yet tell mail providers to reject fake email using your address, so scam messages that look like they come from you can still reach inboxes. Enforcing it also helps your real mail avoid spam folders.
+    Who: whoever manages your domain's DNS (often your web developer or IT provider)
+
+Tools:
+  security-headers-audit  exit 0     3.3 s  ok
+  web-vitals-lite         exit 0     8.5 s  ok
+  a11y-audit              exit 0    13.7 s  ok
+  consent-tracker-scan    exit 0     4.9 s  ok
+  site-seo-crawler        exit 0    12.4 s  ok
+  og-card-check           exit 0     3.4 s  ok
+  email-dns-check         exit 0     0.9 s  ok
+  http-protocol-check     exit 0     6.9 s  ok
+Wrote examples\demarkstudio-report.html
+Wrote examples\demarkstudio-report.md
+Wrote examples\demarkstudio-report.json
+Wrote examples\demarkstudio-report.pdf

@@ -1,0 +1,434 @@
+{
+  "tool": "a11y-audit",
+  "version": "1.0.0",
+  "axe_version": "4.13.0",
+  "generated": "2026-09-29T12:07:30+00:00",
+  "options": {
+    "max_tabs": 30,
+    "motion_threshold_ms": 250,
+    "zoom_factor": 2.0,
+    "viewport": "1280x800",
+    "timeout_s": 30.0,
+    "delay_s": 1.0,
+    "settle_ms": 800,
+    "focus_settle_ms": 700,
+    "skip": [],
+    "best_practice": true,
+    "max_nodes": 10,
+    "fail_on": null
+  },
+  "pages": [
+    {
+      "url": "https://demarkstudio.ca/",
+      "final_url": "https://demarkstudio.ca/en/",
+      "status": 200,
+      "title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "error": null,
+      "tabbable": 85,
+      "focus_order": [
+        {
+          "index": 1,
+          "selector": "body > a",
+          "text": "Skip to content",
+          "flags": []
+        },
+        {
+          "index": 2,
+          "selector": "body > header > div > a",
+          "text": "DeMark",
+          "flags": []
+        },
+        {
+          "index": 3,
+          "selector": "#nav > a:nth-of-type(1)",
+          "text": "PRODUCT",
+          "flags": []
+        },
+        {
+          "index": 4,
+          "selector": "#nav > a:nth-of-type(2)",
+          "text": "PRICING",
+          "flags": []
+        },
+        {
+          "index": 5,
+          "selector": "#nav > a:nth-of-type(3)",
+          "text": "FOR YOUR BUSINESS",
+          "flags": []
+        },
+        {
+          "index": 6,
+          "selector": "#nav > a:nth-of-type(4)",
+          "text": "COMPARE",
+          "flags": []
+        },
+        {
+          "index": 7,
+          "selector": "#nav > a:nth-of-type(5)",
+          "text": "ABOUT",
+          "flags": []
+        },
+        {
+          "index": 8,
+          "selector": "#nav > a:nth-of-type(6)",
+          "text": "LOG IN",
+          "flags": []
+        },
+        {
+          "index": 9,
+          "selector": "#nav > a:nth-of-type(7)",
+          "text": "START FREE",
+          "flags": []
+        },
+        {
+          "index": 10,
+          "selector": "#contenido > div > section:nth-of-type(1) > div > div:nth-of-type(1) > div > a:nth-of-type(1)",
+          "text": "START FREE FOR 7 DAYS",
+          "flags": []
+        },
+        {
+          "index": 11,
+          "selector": "#contenido > div > section:nth-of-type(1) > div > div:nth-of-type(1) > div > a:nth-of-type(2)",
+          "text": "SEE THE DEMO",
+          "flags": []
+        },
+        {
+          "index": 12,
+          "selector": "#contenido > div > section:nth-of-type(1) > div > div:nth-of-type(2) > a",
+          "text": "",
+          "flags": []
+        },
+        {
+          "index": 13,
+          "selector": "#dia > div > ol > li:nth-of-type(1) > div:nth-of-type(2) > a",
+          "text": "",
+          "flags": []
+        },
+        {
+          "index": 14,
+          "selector": "#dia > div > ol > li:nth-of-type(2) > div:nth-of-type(2) > a",
+          "text": "",
+          "flags": []
+        },
+        {
+          "index": 15,
+          "selector": "#dia > div > ol > li:nth-of-type(3) > div:nth-of-type(2) > a",
+          "text": "",
+          "flags": []
+        },
+        {
+          "index": 16,
+          "selector": "#herramientas > div > div:nth-of-type(2) > button:nth-of-type(1)",
+          "text": "Previous",
+          "flags": []
+        },
+        {
+          "index": 17,
+          "selector": "#herramientas > div > div:nth-of-type(2) > button:nth-of-type(2)",
+          "text": "Next",
+          "flags": []
+        },
+        {
+          "index": 18,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul",
+          "text": "Examples of our work",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 19,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 20,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(2) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 21,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(3) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 22,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(4) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 23,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(5) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 24,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(6) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 25,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 26,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(8) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 27,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(9) > article > a",
+          "text": "",
+          "flags": [
+            "off-screen"
+          ]
+        },
+        {
+          "index": 28,
+          "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(10) > article > a",
+          "text": "",
+          "flags": []
+        },
+        {
+          "index": 29,
+          "selector": "#portada-galeria > fieldset > div > label:nth-of-type(2) > input",
+          "text": "general",
+          "flags": []
+        },
+        {
+          "index": 30,
+          "selector": "#portada-general > ul > li:nth-of-type(1) > a:nth-of-type(1)",
+          "text": "",
+          "flags": []
+        }
+      ],
+      "axe": {
+        "version": "4.13.0",
+        "passes": 41,
+        "incomplete": 1
+      },
+      "violations": [
+        {
+          "id": "focus-offscreen",
+          "source": "a11y-audit",
+          "impact": "serious",
+          "wcag": [
+            "2.4.7",
+            "2.4.11"
+          ],
+          "help": "Focused element is off-screen or has zero size",
+          "fix": "Bring focused items into view (scroll carousels to the focused slide, show skip links on :focus) or make hidden ones inert.",
+          "help_url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "count": 10,
+          "nodes": [
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul",
+              "html": "<ul class=\"carrusel-pista bz-pista\" tabindex=\"0\" aria-roledescription=\"carousel\" aria-label=\"Examples of our work\" style=\"translate: none; rotate: none; scale: none; transform: translate(-5547.2px, 0p",
+              "detail": "off screen (Tab stop 18)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(1) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/dashboard-2400.webp?v=1a08684c\" data-visor-alt=\"Dashboard: today's appointments, what is waiting for you and this month's money.\">\n ",
+              "detail": "off screen (Tab stop 19)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(2) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/citas-2400.webp?v=7f505e36\" data-visor-alt=\"Appointments: your week, with online bookings landing in it.\">\n  <img src=\"/static/img/p",
+              "detail": "off screen (Tab stop 20)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(3) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/clientes-2400.webp?v=9ce0f58a\" data-visor-alt=\"Clients: everyone who booked, paid or wrote to you, in one list.\">\n  <img src=\"/stati",
+              "detail": "off screen (Tab stop 21)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(4) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/presupuestos-2400.webp?v=decf411c\" data-visor-alt=\"Quotes: sent by email, accepted online, turned into an invoice.\">\n  <img src=\"/st",
+              "detail": "off screen (Tab stop 22)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(5) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/facturas-2400.webp?v=42a0483b\" data-visor-alt=\"Invoices: paid by card online or marked paid at the counter.\">\n  <img src=\"/static/im",
+              "detail": "off screen (Tab stop 23)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(6) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/sitio-2400.webp?v=bf2c8e37\" data-visor-alt=\"Website editor: a template, your photos, your texts, published in minutes.\">\n  <img src=",
+              "detail": "off screen (Tab stop 24)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(7) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/marca-2400.webp?v=579c2424\" data-visor-alt=\"Brand: colours, logo, fonts and messages applied everywhere your clients see you.\">\n  <i",
+              "detail": "off screen (Tab stop 25)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(8) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/reservas-2400.webp?v=5af769db\" data-visor-alt=\"Booking page: how clients book you online.\">\n  <img src=\"/static/img/portada/reservas",
+              "detail": "off screen (Tab stop 26)"
+            },
+            {
+              "selector": "#herramientas > div > div:nth-of-type(2) > ul > li:nth-of-type(9) > article > a",
+              "html": "<a class=\"sitio-foto bz-captura-pantalla\" href=\"/static/img/portada/documentos-2400.webp?v=92647917\" data-visor-alt=\"Documents: how your quotes and invoices look.\">\n  <img src=\"/static/img/portada/doc",
+              "detail": "off screen (Tab stop 27)"
+            }
+          ]
+        },
+        {
+          "id": "text-zoom-overflow",
+          "source": "a11y-audit",
+          "impact": "serious",
+          "wcag": [
+            "1.4.4",
+            "1.4.10"
+          ],
+          "help": "Page scrolls horizontally with text at 200%",
+          "fix": "Use relative widths (%, rem, max-width) and allow long words to wrap (overflow-wrap:anywhere).",
+          "help_url": "https://www.w3.org/WAI/WCAG22/quickref/",
+          "count": 1,
+          "nodes": [
+            {
+              "selector": "#nav",
+              "html": "<nav class=\"nav\" id=\"nav\" aria-label=\"Main navigation\" style=\"font-size: 34px !important; line-height: 54.4px !important;\">\n      <a href=\"/en/product\" style=\"font-size: 28px !important; line-height: ",
+              "detail": "right edge at 1671 px, viewport 1280 px"
+            }
+          ]
+        }
+      ],
+      "check_errors": [],
+      "summary": {
+        "by_impact": {
+          "critical": {
+            "rules": 0,
+            "nodes": 0
+          },
+          "serious": {
+            "rules": 2,
+            "nodes": 11
+          },
+          "moderate": {
+            "rules": 0,
+            "nodes": 0
+          },
+          "minor": {
+            "rules": 0,
+            "nodes": 0
+          }
+        },
+        "by_wcag": {
+          "1.4.4": {
+            "label": "1.4.4 Resize Text",
+            "rules": [
+              "text-zoom-overflow"
+            ],
+            "nodes": 1
+          },
+          "1.4.10": {
+            "label": "1.4.10 Reflow",
+            "rules": [
+              "text-zoom-overflow"
+            ],
+            "nodes": 1
+          },
+          "2.4.7": {
+            "label": "2.4.7 Focus Visible",
+            "rules": [
+              "focus-offscreen"
+            ],
+            "nodes": 10
+          },
+          "2.4.11": {
+            "label": "2.4.11 Focus Not Obscured (Minimum)",
+            "rules": [
+              "focus-offscreen"
+            ],
+            "nodes": 10
+          }
+        }
+      }
+    }
+  ],
+  "totals": {
+    "by_impact": {
+      "critical": {
+        "rules": 0,
+        "nodes": 0
+      },
+      "serious": {
+        "rules": 2,
+        "nodes": 11
+      },
+      "moderate": {
+        "rules": 0,
+        "nodes": 0
+      },
+      "minor": {
+        "rules": 0,
+        "nodes": 0
+      }
+    },
+    "by_wcag": {
+      "1.4.4": {
+        "label": "1.4.4 Resize Text",
+        "rules": [
+          "text-zoom-overflow"
+        ],
+        "nodes": 1
+      },
+      "1.4.10": {
+        "label": "1.4.10 Reflow",
+        "rules": [
+          "text-zoom-overflow"
+        ],
+        "nodes": 1
+      },
+      "2.4.7": {
+        "label": "2.4.7 Focus Visible",
+        "rules": [
+          "focus-offscreen"
+        ],
+        "nodes": 10
+      },
+      "2.4.11": {
+        "label": "2.4.11 Focus Not Obscured (Minimum)",
+        "rules": [
+          "focus-offscreen"
+        ],
+        "nodes": 10
+      }
+    }
+  },
+  "impacts": [
+    "critical",
+    "serious",
+    "moderate",
+    "minor"
+  ],
+  "fail_on": null,
+  "failed": false,
+  "errors": 0
+}

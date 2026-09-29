@@ -1,0 +1,151 @@
+{
+  "tool": "email-dns-check",
+  "version": "1.0.0",
+  "status": "warn",
+  "domains": [
+    {
+      "domain": "demarkstudio.ca",
+      "status": "warn",
+      "checks": [
+        {
+          "name": "MX",
+          "status": "pass",
+          "summary": "1 MX host(s) (Google Workspace), all resolve",
+          "details": [
+            "1 smtp.google.com -> 74.125.197.27, 64.233.178.27, 64.233.178.26, 74.125.197.26, 2607:f8b0:4020:c0b::1b, 2607:f8b0:4020:c0b::1a, 2607:f8b0:4020:c07::1b, 2607:f8b0:4020:c07::1a"
+          ],
+          "findings": [],
+          "data": {
+            "records": [
+              {
+                "priority": 1,
+                "host": "smtp.google.com"
+              }
+            ],
+            "provider": "Google Workspace"
+          }
+        },
+        {
+          "name": "SPF",
+          "status": "pass",
+          "summary": "1 record, 1/10 DNS lookups, 0/2 void lookups, ends with ~all",
+          "details": [
+            "record: v=spf1 include:_spf.google.com ~all",
+            "expansion:",
+            "  include:_spf.google.com [lookup 1]"
+          ],
+          "findings": [
+            {
+              "severity": "info",
+              "title": "SPF ends with ~all (softfail)",
+              "explanation": "'~all' vs '-all' is a policy choice. With DMARC enforcing, '~all' is common and safe; '-all' asks receivers to reject unlisted senders outright, which can also break forwarded mail.",
+              "record": null
+            }
+          ],
+          "data": {
+            "records": [
+              "v=spf1 include:_spf.google.com ~all"
+            ],
+            "lookups": 1,
+            "void_lookups": 0
+          }
+        },
+        {
+          "name": "DMARC",
+          "status": "warn",
+          "summary": "p=none, aggregate reports on",
+          "details": [
+            "record: v=DMARC1; p=none; rua=mailto:hola@demarkstudio.ca",
+            "policy: p=none, subdomains sp=(inherits p)",
+            "rua: mailto:hola@demarkstudio.ca",
+            "DKIM alignment adkim=r (relaxed: subdomains of the same organisational domain align)",
+            "SPF alignment aspf=r (relaxed: subdomains of the same organisational domain align)"
+          ],
+          "findings": [
+            {
+              "severity": "warn",
+              "title": "DMARC policy is p=none (monitoring only)",
+              "explanation": "p=none tells receivers to take no action on mail that fails DMARC: spoofed mail is still delivered normally. It is the right first stage while you read the aggregate reports, but it does not protect the domain. Staged path: (1) p=none with rua reports while you check that every legitimate sender passes SPF or DKIM with alignment; (2) p=quarantine (optionally with pct below 100 at first) so failing mail goes to spam; (3) p=reject once reports stay clean.",
+              "record": "_dmarc.demarkstudio.ca. TXT \"v=DMARC1; p=quarantine; rua=mailto:hola@demarkstudio.ca\""
+            }
+          ],
+          "data": {
+            "records": [
+              "v=DMARC1; p=none; rua=mailto:hola@demarkstudio.ca"
+            ]
+          }
+        },
+        {
+          "name": "DKIM",
+          "status": "pass",
+          "summary": "1 key(s) found: google (2048-bit)",
+          "details": [
+            "google: RSA 2048-bit key"
+          ],
+          "findings": [],
+          "data": {
+            "probed": [
+              "google",
+              "selector1",
+              "selector2",
+              "k1",
+              "default",
+              "s1",
+              "s2",
+              "mail"
+            ],
+            "keys": [
+              {
+                "selector": "google",
+                "record": "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArckrWZvGu3ro5AOgle5LNwl97PEuzrIds4ilBfzJgIVLAR3FLfKa6WoqEPLf0uB7EvToq/nlZvF3+FRbngTvibm1BdaE5DB46dYQTRXJtRESwAvDtMKFxz/x5HVyXUK3qzYGm+aAGJcIFQHKvTPcsC2k0peKJke/gdVTfmeU2o0fvNAZpoWHHtpGAv91xoutHDSO+KNuqskbC7OCibgEN5Is3l6puNJkAIF3Noshxi57cYmAB1WQL8eDcucAGi8Qa5K4l6rCOdlBGC9ZqJdcT7h1/e3caENSbJzsrYvN05qpcsosAn8S2nfNLTWnQkHg7jRtZffbafkt8iixY7jcbwIDAQAB",
+                "key_type": "rsa",
+                "bits": 2048,
+                "revoked": false
+              }
+            ]
+          }
+        },
+        {
+          "name": "MTA-STS",
+          "status": "info",
+          "summary": "Not published (optional)",
+          "details": [],
+          "findings": [
+            {
+              "severity": "info",
+              "title": "No MTA-STS record",
+              "explanation": "MTA-STS makes senders require TLS with a valid certificate when delivering to your MX hosts, blocking downgrade attacks. To enable it, serve a policy file as text/plain at https://mta-sts.demarkstudio.ca/.well-known/mta-sts.txt (valid HTTPS certificate for mta-sts.demarkstudio.ca) with mode: testing first, then publish the TXT record. Policy file: (one line each) version: STSv1 | mode: testing | mx: smtp.google.com | max_age: 604800",
+              "record": "_mta-sts.demarkstudio.ca. TXT \"v=STSv1; id=2026092901\""
+            }
+          ],
+          "data": {}
+        },
+        {
+          "name": "TLS-RPT",
+          "status": "info",
+          "summary": "Not published (optional)",
+          "details": [],
+          "findings": [
+            {
+              "severity": "info",
+              "title": "No TLS-RPT record",
+              "explanation": "TLS-RPT asks senders to email you daily reports of TLS problems delivering to your domain; useful alongside MTA-STS.",
+              "record": "_smtp._tls.demarkstudio.ca. TXT \"v=TLSRPTv1; rua=mailto:tlsrpt@demarkstudio.ca\""
+            }
+          ],
+          "data": {}
+        },
+        {
+          "name": "BIMI",
+          "status": "info",
+          "summary": "Not published (optional)",
+          "details": [
+            "BIMI shows your logo in some inboxes; it needs DMARC p=quarantine or p=reject and, for Gmail, a verified mark certificate."
+          ],
+          "findings": [],
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

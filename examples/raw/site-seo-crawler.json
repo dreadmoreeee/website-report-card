@@ -1,0 +1,424 @@
+{
+  "tool": "site-seo-crawler",
+  "version": "1.0.0",
+  "generated_at": "2026-09-29T12:07:47+00:00",
+  "start_url": "https://demarkstudio.ca/",
+  "summary": {
+    "urls_requested": 10,
+    "pages_scored": 7,
+    "average_score": 98.6,
+    "issues": {
+      "error": 0,
+      "warning": 2,
+      "notice": 2
+    },
+    "robots_txt": "found",
+    "sitemap_files": [
+      "https://demarkstudio.ca/sitemap.xml"
+    ],
+    "sitemap_urls": 28,
+    "disallowed_by_robots": [
+      "https://demarkstudio.ca/app/login"
+    ],
+    "truncated": true,
+    "not_crawled": 62,
+    "requests": 13,
+    "elapsed_seconds": 12.09,
+    "notes": [
+      "Cloudflare Email Address Obfuscation is on: mailto links point to /cdn-cgi/l/email-protection and only work with JavaScript. Not reported as broken links.",
+      "Stopped at --max-pages 10; 57 discovered URL(s) were not crawled, so sitemap reachability was not judged."
+    ]
+  },
+  "thresholds": {
+    "title": [
+      30,
+      60
+    ],
+    "description": [
+      70,
+      160
+    ]
+  },
+  "scoring": {
+    "broken_link": {
+      "severity": "error",
+      "points": 10,
+      "max_per_page": 30
+    },
+    "redirect_loop": {
+      "severity": "error",
+      "points": 10,
+      "max_per_page": 20
+    },
+    "redirect_chain": {
+      "severity": "warning",
+      "points": 3,
+      "max_per_page": 9
+    },
+    "title_missing": {
+      "severity": "error",
+      "points": 15,
+      "max_per_page": 15
+    },
+    "title_duplicate": {
+      "severity": "warning",
+      "points": 5,
+      "max_per_page": 5
+    },
+    "title_length": {
+      "severity": "warning",
+      "points": 3,
+      "max_per_page": 3
+    },
+    "description_missing": {
+      "severity": "warning",
+      "points": 8,
+      "max_per_page": 8
+    },
+    "description_duplicate": {
+      "severity": "warning",
+      "points": 5,
+      "max_per_page": 5
+    },
+    "description_length": {
+      "severity": "notice",
+      "points": 2,
+      "max_per_page": 2
+    },
+    "canonical_missing": {
+      "severity": "notice",
+      "points": 3,
+      "max_per_page": 3
+    },
+    "canonical_mismatch": {
+      "severity": "warning",
+      "points": 5,
+      "max_per_page": 5
+    },
+    "noindex": {
+      "severity": "warning",
+      "points": 10,
+      "max_per_page": 10
+    },
+    "hreflang_invalid": {
+      "severity": "error",
+      "points": 5,
+      "max_per_page": 10
+    },
+    "hreflang_no_return": {
+      "severity": "error",
+      "points": 5,
+      "max_per_page": 10
+    },
+    "hreflang_no_self": {
+      "severity": "warning",
+      "points": 2,
+      "max_per_page": 2
+    },
+    "hreflang_no_x_default": {
+      "severity": "warning",
+      "points": 2,
+      "max_per_page": 2
+    },
+    "img_missing_alt": {
+      "severity": "warning",
+      "points": 2,
+      "max_per_page": 10
+    },
+    "h1_missing": {
+      "severity": "warning",
+      "points": 5,
+      "max_per_page": 5
+    },
+    "h1_multiple": {
+      "severity": "notice",
+      "points": 3,
+      "max_per_page": 3
+    },
+    "jsonld_invalid": {
+      "severity": "error",
+      "points": 5,
+      "max_per_page": 10
+    },
+    "mixed_content": {
+      "severity": "error",
+      "points": 5,
+      "max_per_page": 15
+    },
+    "sitemap_not_linked": {
+      "severity": "warning",
+      "points": 5,
+      "max_per_page": 5
+    },
+    "not_in_sitemap": {
+      "severity": "notice",
+      "points": 2,
+      "max_per_page": 2
+    },
+    "sitemap_url_error": {
+      "severity": "error",
+      "points": 0,
+      "max_per_page": 0
+    },
+    "sitemap_url_redirect": {
+      "severity": "warning",
+      "points": 0,
+      "max_per_page": 0
+    },
+    "sitemap_blocked": {
+      "severity": "warning",
+      "points": 0,
+      "max_per_page": 0
+    },
+    "sitemap_missing": {
+      "severity": "warning",
+      "points": 0,
+      "max_per_page": 0
+    },
+    "sitemap_invalid": {
+      "severity": "error",
+      "points": 0,
+      "max_per_page": 0
+    }
+  },
+  "pages": [
+    {
+      "url": "https://demarkstudio.ca/en/for/salons",
+      "score": 95,
+      "title": "Booking software and websites for salons across Canada \u2014 DeMark",
+      "issues": {
+        "error": 0,
+        "warning": 1,
+        "notice": 1
+      },
+      "issue_counts": {
+        "title_length": 1,
+        "description_length": 1
+      },
+      "deductions": {
+        "title_length": 3,
+        "description_length": 2
+      }
+    },
+    {
+      "url": "https://demarkstudio.ca/en/",
+      "score": 97,
+      "title": "DeMark \u2014 Websites, online booking and invoicing for small businesses across Canada",
+      "issues": {
+        "error": 0,
+        "warning": 1,
+        "notice": 0
+      },
+      "issue_counts": {
+        "title_length": 1
+      },
+      "deductions": {
+        "title_length": 3
+      }
+    },
+    {
+      "url": "https://demarkstudio.ca/en/start",
+      "score": 98,
+      "title": "Start your free trial \u2014 DeMark",
+      "issues": {
+        "error": 0,
+        "warning": 0,
+        "notice": 1
+      },
+      "issue_counts": {
+        "not_in_sitemap": 1
+      },
+      "deductions": {
+        "not_in_sitemap": 2
+      }
+    },
+    {
+      "url": "https://demarkstudio.ca/en/about",
+      "score": 100,
+      "title": "About DeMark, a web studio in Miramichi, New Brunswick",
+      "issues": {
+        "error": 0,
+        "warning": 0,
+        "notice": 0
+      },
+      "issue_counts": {},
+      "deductions": {}
+    },
+    {
+      "url": "https://demarkstudio.ca/en/compare/square",
+      "score": 100,
+      "title": "Square Appointments alternative in Canada \u2014 DeMark",
+      "issues": {
+        "error": 0,
+        "warning": 0,
+        "notice": 0
+      },
+      "issue_counts": {},
+      "deductions": {}
+    },
+    {
+      "url": "https://demarkstudio.ca/en/pricing",
+      "score": 100,
+      "title": "Pricing: website included from $99 a month \u2014 DeMark",
+      "issues": {
+        "error": 0,
+        "warning": 0,
+        "notice": 0
+      },
+      "issue_counts": {},
+      "deductions": {}
+    },
+    {
+      "url": "https://demarkstudio.ca/en/product",
+      "score": 100,
+      "title": "Online booking, invoicing and payments software \u2014 DeMark",
+      "issues": {
+        "error": 0,
+        "warning": 0,
+        "notice": 0
+      },
+      "issue_counts": {},
+      "deductions": {}
+    }
+  ],
+  "issues": [
+    {
+      "type": "title_length",
+      "severity": "warning",
+      "url": "https://demarkstudio.ca/en/",
+      "message": "Title is 82 characters (recommended 30-60)",
+      "count": 1,
+      "related": []
+    },
+    {
+      "type": "title_length",
+      "severity": "warning",
+      "url": "https://demarkstudio.ca/en/for/salons",
+      "message": "Title is 63 characters (recommended 30-60)",
+      "count": 1,
+      "related": []
+    },
+    {
+      "type": "description_length",
+      "severity": "notice",
+      "url": "https://demarkstudio.ca/en/for/salons",
+      "message": "Meta description is 180 characters (recommended 70-160)",
+      "count": 1,
+      "related": []
+    },
+    {
+      "type": "not_in_sitemap",
+      "severity": "notice",
+      "url": "https://demarkstudio.ca/en/start",
+      "message": "Reachable, indexable page that is not in the sitemap",
+      "count": 1,
+      "related": []
+    }
+  ],
+  "urls": [
+    {
+      "url": "https://demarkstudio.ca/",
+      "status": 302,
+      "final_url": "https://demarkstudio.ca/en/",
+      "final_status": 200,
+      "redirects": [
+        [
+          "https://demarkstudio.ca/",
+          302
+        ]
+      ],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/about",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/about",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/compare/square",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/compare/square",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/for/salons",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/for/salons",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/pricing",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/pricing",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/product",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/product",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/en/start",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/en/start",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/static/img/portada/citas-2400.webp?v=7f505e36",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/static/img/portada/citas-2400.webp?v=7f505e36",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/static/img/portada/dashboard-2400.webp?v=1a08684c",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/static/img/portada/dashboard-2400.webp?v=1a08684c",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    },
+    {
+      "url": "https://demarkstudio.ca/static/img/portada/sitio-2400.webp?v=bf2c8e37",
+      "status": 200,
+      "final_url": "https://demarkstudio.ca/static/img/portada/sitio-2400.webp?v=bf2c8e37",
+      "final_status": 200,
+      "redirects": [],
+      "loop": false,
+      "error": null
+    }
+  ]
+}

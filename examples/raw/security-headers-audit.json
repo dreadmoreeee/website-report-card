@@ -1,0 +1,178 @@
+[
+  {
+    "url": "https://demarkstudio.ca/",
+    "final_url": "https://demarkstudio.ca/en/",
+    "status": 200,
+    "redirects": [
+      "302 https://demarkstudio.ca/ -> https://demarkstudio.ca/en/"
+    ],
+    "score": 98,
+    "grade": "A+",
+    "error": null,
+    "checks": [
+      {
+        "check": "https-redirect",
+        "title": "HTTPS redirect",
+        "points": 10,
+        "max_points": 10,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "http://demarkstudio.ca/ -> 308 -> https://demarkstudio.ca/",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "tls",
+        "title": "TLS",
+        "points": 10,
+        "max_points": 10,
+        "findings": [
+          {
+            "severity": "info",
+            "message": "Negotiated TLSv1.3.",
+            "fix": null
+          },
+          {
+            "severity": "info",
+            "message": "Certificate valid for 71 more days (until 2026-12-10).",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "hsts",
+        "title": "Strict-Transport-Security",
+        "points": 20,
+        "max_points": 20,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "HSTS max-age=31536000 (at least 1 year).",
+            "fix": null
+          },
+          {
+            "severity": "pass",
+            "message": "HSTS includeSubDomains is set.",
+            "fix": null
+          },
+          {
+            "severity": "info",
+            "message": "Eligible for the HSTS preload list (hstspreload.org); the apex domain must also redirect HTTP to HTTPS and send this header.",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "csp",
+        "title": "Content-Security-Policy",
+        "points": 20,
+        "max_points": 20,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "script-src: 'self' https://static.cloudflareinsights.com",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "frame",
+        "title": "Clickjacking (frame-ancestors / X-Frame-Options)",
+        "points": 10,
+        "max_points": 10,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "Framing restricted by CSP frame-ancestors 'none'.",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "x-content-type-options",
+        "title": "X-Content-Type-Options",
+        "points": 5,
+        "max_points": 5,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "X-Content-Type-Options: nosniff",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "referrer-policy",
+        "title": "Referrer-Policy",
+        "points": 5,
+        "max_points": 5,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "Referrer-Policy: strict-origin-when-cross-origin",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "permissions-policy",
+        "title": "Permissions-Policy",
+        "points": 5,
+        "max_points": 5,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "Permissions-Policy is present.",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "cross-origin",
+        "title": "COOP / CORP",
+        "points": 3,
+        "max_points": 5,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "Cross-Origin-Opener-Policy: same-origin",
+            "fix": null
+          },
+          {
+            "severity": "low",
+            "message": "No Cross-Origin-Resource-Policy.",
+            "fix": "Cross-Origin-Resource-Policy: same-origin"
+          }
+        ]
+      },
+      {
+        "check": "cookies",
+        "title": "Cookies",
+        "points": 5,
+        "max_points": 5,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "Cookie 'idioma': Secure, HttpOnly, SameSite=lax.",
+            "fix": null
+          }
+        ]
+      },
+      {
+        "check": "leakage",
+        "title": "Server / version leakage",
+        "points": 5,
+        "max_points": 5,
+        "findings": [
+          {
+            "severity": "pass",
+            "message": "No version numbers in Server / X-Powered-By style headers.",
+            "fix": null
+          }
+        ]
+      }
+    ]
+  }
+]

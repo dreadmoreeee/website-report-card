@@ -1,0 +1,49 @@
+# Example: a monthly report card for a client site, kept as a build artifact.
+# Copy to .github/workflows/ in your own repository and change the URL and branding.
+name: Monthly website report card
+
+on:
+  schedule:
+    - cron: "0 8 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Get the tools side by side
+        run: |
+          mkdir tools && cd tools
+          for repo in website-report-card security-headers-audit web-vitals-lite a11y-audit \
+                      consent-tracker-scan site-seo-crawler og-card-check email-dns-check \
+                      http-protocol-check; do
+            git clone --depth 1 "https://github.com/dreadmoreeee/$repo"
+          done
+
+      - name: Install dependencies
+        run: |
+          pip install playwright pillow dnspython cryptography
+          python -m playwright install --with-deps chromium
+
+      - name: Build the report card
+        working-directory: tools/website-report-card
+        env:
+          PYTHONUTF8: "1"
+        run: |
+          python -m website_report_card https://www.example.com \
+            --local-src .. --out-dir ../../report-card --pdf \
+            --brand-name "Maple Web Co." --brand-color "#1f4e79" \
+            --prepared-for "Riverbend Bakery"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: website-report-card
+          path: report-card/

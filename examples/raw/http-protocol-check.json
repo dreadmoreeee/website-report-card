@@ -1,0 +1,230 @@
+{
+  "tool": "http-protocol-check",
+  "version": "1.0.0",
+  "generated": "2026-09-29T12:07:59Z",
+  "hosts": [
+    {
+      "host": "demarkstudio.ca",
+      "port": 443,
+      "error": null,
+      "checks": {
+        "connection": {
+          "ip": "172.64.80.1",
+          "tls_version": "TLSv1.3",
+          "cipher": "TLS_AES_256_GCM_SHA384"
+        },
+        "verification": {
+          "verified": true,
+          "error": null
+        },
+        "alpn": {
+          "offered": [
+            "h2",
+            "http/1.1"
+          ],
+          "selected": "h2",
+          "h2": true,
+          "http1_1_selected_when_only_offered": "http/1.1",
+          "http1_1": true
+        },
+        "certificate": {
+          "subject": "CN=demarkstudio.ca",
+          "common_name": "demarkstudio.ca",
+          "issuer": "CN=WE1,O=Google Trust Services,C=US",
+          "not_before": "2026-09-11T01:43:08+00:00",
+          "not_after": "2026-12-10T02:41:43+00:00",
+          "days_left": 71,
+          "expired": false,
+          "sans": [
+            "demarkstudio.ca",
+            "*.demarkstudio.ca"
+          ],
+          "key_type": "EC",
+          "key_size": 256,
+          "curve": "secp256r1",
+          "signature_algorithm": "ecdsa-with-SHA256",
+          "self_signed": false,
+          "chain": [
+            {
+              "subject": "CN=demarkstudio.ca",
+              "issuer": "CN=WE1,O=Google Trust Services,C=US",
+              "not_after": "2026-12-10T02:41:43+00:00",
+              "key_type": "EC",
+              "key_size": 256,
+              "signature_algorithm": "ecdsa-with-SHA256"
+            },
+            {
+              "subject": "CN=WE1,O=Google Trust Services,C=US",
+              "issuer": "CN=GTS Root R4,O=Google Trust Services LLC,C=US",
+              "not_after": "2029-02-20T14:00:00+00:00",
+              "key_type": "EC",
+              "key_size": 256,
+              "signature_algorithm": "ecdsa-with-SHA384"
+            },
+            {
+              "subject": "CN=GTS Root R4,O=Google Trust Services LLC,C=US",
+              "issuer": "CN=GlobalSign Root CA,OU=Root CA,O=GlobalSign nv-sa,C=BE",
+              "not_after": "2028-01-28T00:00:42+00:00",
+              "key_type": "EC",
+              "key_size": 384,
+              "signature_algorithm": "sha256WithRSAEncryption"
+            },
+            {
+              "subject": "CN=GlobalSign Root CA,OU=Root CA,O=GlobalSign nv-sa,C=BE",
+              "issuer": "CN=GlobalSign Root CA,OU=Root CA,O=GlobalSign nv-sa,C=BE",
+              "not_after": "2028-01-28T12:00:00+00:00",
+              "key_type": "RSA",
+              "key_size": 2048,
+              "signature_algorithm": "sha1WithRSAEncryption"
+            }
+          ],
+          "chain_note": null,
+          "ocsp_stapling": "not detectable with Python ssl"
+        },
+        "tls_versions": [
+          {
+            "version": "TLSv1.0",
+            "status": "accepted",
+            "detail": "ECDHE-ECDSA-AES128-SHA",
+            "negotiated": "TLSv1"
+          },
+          {
+            "version": "TLSv1.1",
+            "status": "accepted",
+            "detail": "ECDHE-ECDSA-AES128-SHA",
+            "negotiated": "TLSv1.1"
+          },
+          {
+            "version": "TLSv1.2",
+            "status": "accepted",
+            "detail": "ECDHE-ECDSA-AES128-GCM-SHA256",
+            "negotiated": "TLSv1.2"
+          },
+          {
+            "version": "TLSv1.3",
+            "status": "accepted",
+            "detail": "TLS_AES_256_GCM_SHA384",
+            "negotiated": "TLSv1.3"
+          }
+        ],
+        "http": {
+          "requests": [
+            {
+              "path": "/",
+              "status": 302,
+              "content_type": null,
+              "server": "cloudflare"
+            },
+            {
+              "path": "/en/",
+              "status": 200,
+              "content_type": "text/html; charset=utf-8",
+              "server": "cloudflare"
+            }
+          ]
+        },
+        "http3": {
+          "alt_svc": "h3=\":443\"; ma=86400",
+          "entries": [
+            {
+              "protocol": "h3",
+              "authority": ":443",
+              "ma": 86400,
+              "persist": false
+            }
+          ],
+          "advertised": true,
+          "note": "advertised via Alt-Svc only; no QUIC connection was attempted"
+        },
+        "hsts": {
+          "raw": "max-age=31536000; includeSubDomains; preload",
+          "max_age": 31536000,
+          "include_subdomains": true,
+          "preload": true,
+          "valid": true,
+          "preload_eligible": true,
+          "preload_missing": [],
+          "present": true
+        },
+        "compression": {
+          "path": "/en/",
+          "content_type": "text/html; charset=utf-8",
+          "html": true,
+          "requests": [
+            {
+              "accept_encoding": "br",
+              "status": 200,
+              "content_encoding": "br",
+              "content_length": null,
+              "vary": "Accept-Encoding"
+            },
+            {
+              "accept_encoding": "gzip",
+              "status": 200,
+              "content_encoding": "gzip",
+              "content_length": null,
+              "vary": "Accept-Encoding"
+            },
+            {
+              "accept_encoding": "zstd",
+              "status": 200,
+              "content_encoding": "zstd",
+              "content_length": null,
+              "vary": "Accept-Encoding"
+            },
+            {
+              "accept_encoding": "br, gzip, zstd",
+              "status": 200,
+              "content_encoding": "zstd",
+              "content_length": null,
+              "vary": "Accept-Encoding"
+            }
+          ],
+          "supported": [
+            "br",
+            "gzip",
+            "zstd"
+          ],
+          "status": "ok"
+        },
+        "early_hints": {
+          "seen": false,
+          "responses": [],
+          "note": "only seen if the server sent 103 for these GET requests over HTTP/1.1; absence is not proof it is unsupported"
+        },
+        "http_redirect": {
+          "url": "http://demarkstudio.ca:80/",
+          "status": 308,
+          "location": "https://demarkstudio.ca/",
+          "redirects_to_https": true,
+          "same_host": true,
+          "permanent": true
+        },
+        "ipv6": {
+          "status": "not_tested",
+          "addresses": [
+            "2606:4700:130:436c:6f75:6466:6c61:7265"
+          ],
+          "reason": "no IPv6 route on this machine"
+        }
+      },
+      "findings": [
+        {
+          "level": "warning",
+          "code": "tls-legacy",
+          "message": "TLSv1.0 is accepted (deprecated by RFC 8996)"
+        },
+        {
+          "level": "warning",
+          "code": "tls-legacy",
+          "message": "TLSv1.1 is accepted (deprecated by RFC 8996)"
+        },
+        {
+          "level": "info",
+          "code": "ipv6-not-tested",
+          "message": "IPv6 not tested: this machine has no IPv6 route to the published AAAA address"
+        }
+      ]
+    }
+  ]
+}
