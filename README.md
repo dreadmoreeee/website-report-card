@@ -142,7 +142,7 @@ Honest reading:
 ```
 $ python -m pytest -q -p no:cacheprovider --import-mode=importlib website-report-card
 ...............................................................          [100%]
-63 passed in 5.32s
+64 passed in 5.19s
 ```
 
 The tests need no internet: a fake `subprocess.run` answers with canned JSON (invented example.com data), and one test runs real subprocesses against fake tool folders, one that sleeps past the timeout, one that crashes and one that is missing. The PDF test is skipped if Chromium is not installed.

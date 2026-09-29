@@ -591,7 +591,11 @@ def email(data) -> Area:
     warns = [c for c in checks if c.get("status") == "warn"]
     area = Area("email", "email-dns-check", checked=True,
                 score=_clamp(100 - 30 * len(fails) - 10 * len(warns)))
-    if fails:
+    web_only = any("v=spf1 -all" in (f.get("record") or "") for c in fails for f in c.get("findings") or [])
+    if fails and web_only:
+        area.verdict = (f"{d.get('domain')} sends no email, but others can fake mail from it: "
+                        f"{', '.join(c['name'] for c in fails)} missing.")
+    elif fails:
         area.verdict = (f"Email from {d.get('domain')} can be faked or lost: "
                         f"{', '.join(c['name'] for c in fails)} failed.")
     elif warns:
@@ -609,6 +613,12 @@ def email(data) -> Area:
     for c in fails + warns:
         title, why = _EMAIL.get(c.get("name"), (f"Fix the {c.get('name')} email record",
                                                 "It helps your email reach inboxes."))
+        if c.get("name") == "SPF" and any("v=spf1 -all" in (f.get("record") or "")
+                                          for f in c.get("findings") or []):
+            # a web-only host: nothing of yours can land in spam, the risk is only spoofing
+            title, why = ("Block fake email from this web address",
+                          "This address does not send email, but nothing stops others from sending "
+                          "mail that pretends to come from it. One DNS line (v=spf1 -all) fixes it.")
         who = DNS if c.get("name") != "DKIM" else "your email provider's admin panel, then " + DNS
         area.issues.append(Issue("email", "email:" + str(c.get("name")), _sev(c.get("status", "")),
                                  title, why, who, f"{c.get('name')}: {c.get('summary', '')}"))

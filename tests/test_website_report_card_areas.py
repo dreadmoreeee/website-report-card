@@ -114,3 +114,14 @@ def test_empty_list_is_not_checked():
         areas.security([])
     with pytest.raises(NotChecked):
         areas.speed({"results": []})
+
+
+def test_web_only_host_gets_spoofing_advice_not_spam_advice():
+    from website_report_card.areas import email
+    data = {"domains": [{"domain": "www2.example.com", "checks": [
+        {"name": "SPF", "status": "fail", "summary": "No SPF record",
+         "findings": [{"severity": "fail", "title": "No SPF record",
+                       "record": "www2.example.com. TXT \"v=spf1 -all\""}]}]}]}
+    area = email(data)
+    assert area.issues[0].title == "Block fake email from this web address"
+    assert "spam" not in area.issues[0].why
